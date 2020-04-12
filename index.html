@@ -26,13 +26,19 @@
         h3 {
             break-after: avoid;
         }
+
+        @media (max-width: 449px) {
+            .tambola {
+                grid-template-columns: repeat(9, 35px);
+                grid-template-rows: repeat(3, 35px);
+            }
+        }
     </style>
 </head>
 <body>
     <div class="tickets">
 
     </div>
-    <h6>Developed with ❤️ by s4san</h6>
     <script>
         function getCount() {
             return Number(window.prompt('Enter number of tickets'));
