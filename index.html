@@ -61,6 +61,7 @@
     <script>
         {
             'use strict';
+            const rowRange = [1, 2, 3, 4, 5, 6, 7, 8, 9];
             const $tickets = document.querySelector('.tickets');
             document.getElementById('ticketCount').addEventListener('input', ({target}) => {
                 let count = Number(target.value);
@@ -68,8 +69,7 @@
                 if (!count || !Number.isFinite(count)) {
                     target.setCustomValidity('Enter a value between 1 and 100');
                 }
-                
-                const rowRange = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
                 const tickets = [];
                 // const contestants = [];
                 // contestants.sort();
