@@ -66,7 +66,7 @@
             document.getElementById('ticketCount').addEventListener('input', ({target}) => {
                 let count = Number(target.value);
                 
-                if (!count || !Number.isFinite(count)) {
+                if (!count || !Number.isFinite(count) || count > 100) {
                     target.setCustomValidity('Enter a value between 1 and 100');
                     return;
                 }
