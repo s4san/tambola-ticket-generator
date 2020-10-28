@@ -172,7 +172,7 @@
             
             // Trigger input event on load
             const event = new KeyboardEvent('input', {bubbles: true, cancelable: true});
-            document.getElementById('ticketCount').dispatchEvent('input');
+            document.getElementById('ticketCount').dispatchEvent(event);
         }
     </script>
 </body>
