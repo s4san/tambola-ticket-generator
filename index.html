@@ -63,7 +63,7 @@
 <body>
     <label for="ticketCount">
         Enter number of tickets, print the page and enjoy!
-        <input type="number" id="ticketCount" name="ticketCount" required min="1" max="100">
+        <input type="number" id="ticketCount" name="ticketCount" required min="1" max="100" value="10">
     </label>
     <div class="tickets">
 
@@ -137,8 +137,9 @@
                 return column;
             }
 
-
-
+            /**
+             * Generate ticket HTML
+             **/
             function generateTicket() {
                 const tambola = document.createElement('div');
                 tambola.classList.add('tambola');
@@ -168,6 +169,10 @@
 
                 return tambola;
             }
+            
+            // Trigger input event on load
+            const event = new KeyboardEvent('input', {bubbles: true, cancelable: true});
+            document.getElementById('ticketCount').dispatchEvent('input');
         }
     </script>
 </body>
