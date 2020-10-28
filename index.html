@@ -64,6 +64,8 @@
             const rowRange = [1, 2, 3, 4, 5, 6, 7, 8, 9];
             const $tickets = document.querySelector('.tickets');
             document.getElementById('ticketCount').addEventListener('input', ({target}) => {
+                target.setCustomValidity('');
+
                 let count = Number(target.value);
                 
                 if (!count || !Number.isFinite(count) || count > 100) {
