@@ -68,6 +68,7 @@
                 
                 if (!count || !Number.isFinite(count)) {
                     target.setCustomValidity('Enter a value between 1 and 100');
+                    return;
                 }
 
                 const tickets = [];
